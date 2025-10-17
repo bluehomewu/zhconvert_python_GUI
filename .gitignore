@@ -48,6 +48,7 @@ zhconvert_settings.json
 # ========================
 build/
 dist/
+output/
 *.egg-info/
 
 
@@ -59,3 +60,10 @@ dist/
 .pytest_cache/
 htmlcov/
 .coverage
+
+# ========================
+# favicon
+#
+# 忽略專案中的 favicon.ico 檔案。
+# ========================
+favicon.zip

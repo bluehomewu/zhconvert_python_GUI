@@ -2,6 +2,8 @@
 import customtkinter
 import threading
 import json
+import sys  # 引入 sys 模組
+import os   # 引入 os 模組
 from pathlib import Path
 from tkinter import messagebox
 from api_client import convert_text_online
@@ -11,6 +13,18 @@ from ui.tabs.replace_tab import ReplaceTab
 from ui.tabs.modules_tab import ModulesTab
 from ui.tabs.summary_tab import SummaryTab
 
+def resource_path(relative_path):
+    """
+    取得資源的絕對路徑，無論是作為腳本執行還是作為打包後的 .exe 執行。
+    """
+    try:
+        # PyInstaller 建立一個臨時資料夾，並將路徑儲存在 _MEIPASS 中
+        base_path = sys._MEIPASS
+    except Exception:
+        # 如果不是打包後執行，則使用普通的相對路徑
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 class App(customtkinter.CTk):
 
@@ -19,6 +33,14 @@ class App(customtkinter.CTk):
         self.service_info = service_info
         self.title("繁化姬桌面版")
         self.geometry("1200x900")
+        # 確保您的圖示檔案 (例如 'favicon.ico') 與 main.py 放在同一個目錄下
+        try:
+            icon_path = resource_path("./pictures/favicon/favicon.ico")
+            self.iconbitmap(icon_path)
+        except Exception as e:
+            # 如果找不到圖示檔案或格式不對，打印一個錯誤訊息但不會讓程式崩潰
+            print(f"Error setting icon: {e}")
+
         self.settings_file = Path("zhconvert_settings.json")
 
         self.grid_columnconfigure(0, weight=1)
