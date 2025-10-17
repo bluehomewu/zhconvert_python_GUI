@@ -1,0 +1,61 @@
+# ========================
+# Python Byte-compiled / Cache Files
+#
+# 忽略由 Python 解譯器自動生成的位元組碼快取檔案和資料夾。
+# ========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+# ========================
+# Virtual Environments
+#
+# 忽略常見的 Python 虛擬環境資料夾。
+# ========================
+venv/
+env/
+.venv/
+.env/
+
+
+# ========================
+# Application-specific Generated Files
+#
+# 忽略由我們的應用程式在執行時生成的檔案。
+# ========================
+
+# 使用者設定檔
+zhconvert_settings.json
+
+
+# ========================
+# IDE / Editor Directories
+#
+# 忽略由常見的程式碼編輯器或 IDE 自動產生的設定資料夾。
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# ========================
+# Build and Distribution
+#
+# 忽略在打包和分發專案時產生的資料夾。
+# ========================
+build/
+dist/
+*.egg-info/
+
+
+# ========================
+# Testing
+#
+# 忽略由測試工具產生的快取或報告檔案。
+# ========================
+.pytest_cache/
+htmlcov/
+.coverage
