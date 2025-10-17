@@ -1,6 +1,7 @@
 # 繁化姬桌面版 (Fanhuaji Desktop Client)
 
-這是一個使用 Python 和 CustomTkinter 建立的「繁化姬」(zhconvert.org) 桌面應用程式。它透過呼叫官方提供的公開 API，實現了繁簡轉換與地區化詞彙轉換的核心功能，並提供了一個現代化、功能豐富的圖形化使用者介面。
+這是一個使用 Python 和 CustomTkinter 建立的「繁化姬」(zhconvert.org) 桌面應用程式。  
+它透過呼叫官方提供的公開 API，實現了繁簡轉換與地區化詞彙轉換的核心功能，並提供了一個現代化、功能豐富的圖形化使用者介面。
 
 本專案旨在提供一個原生、高效能的桌面體驗，讓使用者可以方便地在本地環境中使用繁化姬強大的轉換服務，並保存個人的常用設定。
 
@@ -90,8 +91,8 @@ zhconvert_python_GUI/
 
 ## 🙏 致謝
 
-- **繁化姬 (zhconvert.org)**: 感謝其開發者提供了如此強大且穩定的公開 API，使得這個專案成為可能。
-  本程式使用了繁化姬的 API 服務，請參閱其 [繁化姬 說明文件](https://docs.zhconvert.org/) 以了解相關使用規範。
+- **繁化姬 (zhconvert.org)**: 感謝其開發者提供了如此強大且穩定的公開 API，使得這個專案成為可能。  
+  本程式使用了繁化姬的 API 服務，請參閱其 [繁化姬 說明文件](https://docs.zhconvert.org/) 以了解相關使用規範。  
   繁化姬商用必須付費，請遵守其授權條款。
 
 ## 📄 授權
@@ -100,6 +101,6 @@ zhconvert_python_GUI/
 
 
 ## 📬 聯絡方式
-如有任何問題或建議，歡迎透過 GitHub Issues 與我聯絡，或直接發送電子郵件至 [bluehome.wu@gmail.com](mailto:bluehome.wu@gmail.com)
-本工具為個人開發與維護，歡迎任何形式的回饋與貢獻！
+如有任何問題或建議，歡迎透過 GitHub Issues 與我聯絡，或直接發送電子郵件至 [bluehome.wu@gmail.com](mailto:bluehome.wu@gmail.com)  
+本工具為個人開發與維護，歡迎任何形式的回饋與貢獻！  
 謝謝您的使用與支持！😊
