@@ -20,8 +20,14 @@ def hide_console():
             # 如果該控制台視窗是專門為此程式開啟的（例如直接點擊 .exe），它就會關閉。
             # 如果是從現有 CMD 執行的，它會釋放控制權，讓 CMD 回到輸入狀態。
             ctypes.windll.kernel32.FreeConsole()
-        except Exception as e:
-            print(f"無法關閉控制台: {e}")
+
+            # 將標準輸出與錯誤導向到「黑洞」(os.devnull)
+            # 避免後續 api_client.py 裡的 print() 找不到終端機而觸發[WinError 6] 控制代碼無效
+            devnull = open(os.devnull, "w", encoding="utf-8")
+            sys.stdout = devnull
+            sys.stderr = devnull
+        except Exception:
+            pass
 
 
 if __name__ == "__main__":
